@@ -26,7 +26,7 @@ io.on('connection', client => {
         io.emit('mensaje', {admin: 'Nuevo mensaje'});
      }); //debe ser igual al mensaje que esta el el html
 
-     client.on('vote-band', (payload) =>{
+     client.on('vote-band', (payload) => {
         bands.voteBand(payload.id);
         io.emit('active-bands', bands.getBands());
       });
